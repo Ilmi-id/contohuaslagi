@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('scholarships', function (Blueprint $table) {
             $table->id();
             $table->string('name'); 
+            $table->string('description'); 
             $table->string('type'); 
             $table->integer('amount'); 
             $table->timestamps();

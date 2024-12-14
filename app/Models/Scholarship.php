@@ -11,5 +11,6 @@ class Scholarship extends Model
     use HasFactory;
 
     // Tambahkan kolom yang bisa diisi secara massal
-    protected $fillable = ['name', 'slug', 'description', 'amount'];
+    protected $guarded = ['id'];
+    protected $table = 'scholarships';
 }

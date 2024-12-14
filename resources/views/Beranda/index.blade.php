@@ -107,20 +107,23 @@ https://templatemo.com/tm-562-space-dynamic
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-              <div class="hidden-content">
-                <h4>SEO Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
+        @foreach ($scholarships as $scholarship)
+          <div class="col-lg-3 col-sm-6">
+            <a href="#">
+              <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                <div class="hidden-content">
+                  <h4>{{ $scholarship->name }}</h4>
+                  <p>{{ $scholarship->description }}</p>
+                </div>
+                <div class="showed-content">
+                  <img src="{{ asset('storage/01JF2Q1M56VB3VZBPHVBD42YW7.png') }}" alt="">
+                </div>
               </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
+            </a>
+          </div>
+            
+        @endforeach
+        {{-- <div class="col-lg-3 col-sm-6">
           <a href="#">
             <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
               <div class="hidden-content">
@@ -160,7 +163,7 @@ https://templatemo.com/tm-562-space-dynamic
           </a>
         </div>
       </div>
-    </div>
+    </div> --}}
   </div>
 
   <div id="contact" class="contact-us section">
