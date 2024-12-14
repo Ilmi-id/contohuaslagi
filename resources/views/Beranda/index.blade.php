@@ -115,55 +115,18 @@ https://templatemo.com/tm-562-space-dynamic
                   <h4>{{ $scholarship->name }}</h4>
                   <p>{{ $scholarship->description }}</p>
                 </div>
+                @foreach ($students as $student )
+                {{-- @dd($student->photo) --}}
                 <div class="showed-content">
-                  <img src="{{ asset('storage/01JF2Q1M56VB3VZBPHVBD42YW7.png') }}" alt="">
+                  <img src={{ asset('storage/'.$student->photo )}} alt="">
                 </div>
+                @endforeach
               </div>
             </a>
           </div>
             
         @endforeach
-        {{-- <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-              <div class="hidden-content">
-                <h4>Website Reporting</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-              <div class="hidden-content">
-                <h4>Performance Tests</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-          <a href="#">
-            <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-              <div class="hidden-content">
-                <h4>Data Analysis</h4>
-                <p>Lorem ipsum dolor sit ameti ctetur aoi adipiscing eto.</p>
-              </div>
-              <div class="showed-content">
-                <img src="assets/images/portfolio-image.png" alt="">
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div> --}}
+
   </div>
 
   <div id="contact" class="contact-us section">
