@@ -107,7 +107,7 @@ https://templatemo.com/tm-562-space-dynamic
         </div>
       </div>
       <div class="row">
-        @foreach ($scholarships as $scholarship)
+        @foreach ($scholarships->take(8) as $scholarship)
           <div class="col-lg-3 col-sm-6">
             <a href="#">
               <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
